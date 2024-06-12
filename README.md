@@ -1,1 +1,2 @@
-# Blog_Application
+
+This project focuses on developing a Blog Application RESTful API using Java and the Spring Boot framework, aiming to create a user-friendly platform for managing blog content. The primary objective is to implement a system that supports essential CRUD (Create, Read, Update, Delete) operations for blog posts, providing users with the ability to easily manage their content. Key features include user authentication via JWT, ensuring secure access to the platform, and a comprehensive post management system that allows users to create, edit, and delete blog posts. The project involves designing RESTful APIs to facilitate efficient data handling and interaction between the client and server, ensuring a seamless and secure user experience.
