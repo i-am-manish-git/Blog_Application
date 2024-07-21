@@ -42,15 +42,15 @@ public class UserController {
 		return ResponseEntity.ok(updateUser);
 	}
 	
-	//Delete user
+	//Delete user by ADMIN only
+	//@PreAuthorize("hasRole('ADMIN')")
 	@DeleteMapping("/{userId}")
 	public ResponseEntity<ApiResponse> deleteUser(@PathVariable Integer userId){
 		this.userService.deleteUser(userId);
 		return new ResponseEntity<ApiResponse>(new ApiResponse("User deleted Successfully!", true), HttpStatus.OK);
 	}
 	
-	//get all user by ADMIN only
-	@PreAuthorize("hasRole('ADMIN')")
+	//get all user 
 	@GetMapping("/")
 	public ResponseEntity<List<UserDto>> getAllUsers(){
 		return ResponseEntity.ok(this.userService.getAllUsers());

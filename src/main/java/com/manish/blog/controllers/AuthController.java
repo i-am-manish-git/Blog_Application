@@ -8,6 +8,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,7 @@ import com.manish.blog.security.JwtTokenHelper;
 import com.manish.blog.services.UserService;
 
 @RestController
-@RequestMapping("/api/auth/")
+@RequestMapping("/api/auth")
 public class AuthController {
 	
 	@Autowired
@@ -67,7 +68,7 @@ public class AuthController {
 		}
 	}
 	
-	//register new user api
+	//register new user API
 	@PostMapping("/register")
 	public ResponseEntity<UserDto> registerUser(
 			@RequestBody UserDto userDto){

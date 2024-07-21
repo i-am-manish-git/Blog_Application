@@ -49,7 +49,8 @@ public class User implements UserDetails {
 	
 	//relationship with role
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinTable(name="user_role", joinColumns = @JoinColumn(name="user",referencedColumnName = "id"),
+	@JoinTable(name="user_role",
+	joinColumns = @JoinColumn(name="user",referencedColumnName = "id"),
 	inverseJoinColumns = @JoinColumn(name="role", referencedColumnName = "id"))
 	private Set<Role> roles = new HashSet<>();
 
